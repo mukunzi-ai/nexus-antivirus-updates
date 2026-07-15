@@ -141,16 +141,21 @@ cython_debug/
 *.swp
 *.swo
 *.sublime-*
+*.code-workspace
 
-# OS
+# OS files
 Thumbs.db
 .DS_Store
 desktop.ini
 
 # --- NEXUS ANTIVIRUS SPECIFIC ---
-# Database files
+
+# Database files (contains scan history, user data)
 database/*.db
 database/backups/
+*.db
+*.sqlite
+*.sqlite3
 
 # Quarantine folder (contains actual quarantined files)
 quarantine/
@@ -174,19 +179,24 @@ temp/
 *.bak
 backup_*.db
 
-# Exclude the updates folder if it's local
-updates/
-
-# Profile/performance data
+# Profiling data
 *.prof
 *.pstats
 
 # Patch files
 *.patch
 
-# IDE workspace
-*.code-workspace
+# Exclude the updates folder if it's local
+updates/
 
 # Test files
 test_*.py
 *_test.py
+
+# Secret/private files
+git password.txt
+*.secret
+*.key
+*.pem
+*.crt
+*.csr
